@@ -1,0 +1,88 @@
+.content {
+  background-image: url(assets/ComputerPhoto.png);
+  background-size: cover;
+  background-position: center center;
+  /*position: relative;*/
+  height: 90vh;
+  z-index: -10
+}
+
+
+/*.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -5;
+  background-color: rgba(0, 0, 0, 0.5);
+}*/
+
+.pageHeader {
+  height: 5vh;
+  background: #363a3d;
+  background: -webkit-gradient(linear, left top, left bottom, from(#747c82), to(#363a3d));
+}
+
+.titleCont {
+  height: 5%;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-family: helvetica, serif;
+  text-shadow: #818585 0 1px 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: black;
+  text-align: center;
+}
+
+.jumbotron {
+  background-color: grey;
+  height: 80%;
+  margin-top: 0%;
+  margin-bottom: 0;
+}
+
+.buttonContainer {
+  display: block;
+  text-align: center;
+}
+
+.generateButton {
+  display: block;
+  text-align: center;
+  border: 1px solid #253138;
+  background: #363a3d;
+  background: -webkit-gradient(linear, left top, left bottom, from(#747c82), to(#363a3d));
+  border-radius: 30px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(255, 255, 255, 0.4) 0 1px 0;
+  box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(255, 255, 255, 0.4) 0 1px 0;
+  text-shadow: #818585 0 1px 0;
+  color: #000000;
+  font-size: 21px;
+  font-family: helvetica, serif;
+  text-decoration: none;
+  transition: all 0.9s ease;
+}
+
+.generateButton:hover {
+  border: 1px solid black;
+  text-shadow: black 0 1px 0;
+  background: black;
+  background: -webkit-gradient(linear, left top, left bottom, from(#191a1a), to(#333536));
+  background-image: -ms-linear-gradient(top, #191a1a 0%, #333536 100%);
+  color: grey;
+  text-decoration: none;
+}
+
+.footer {
+  height: 5vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#747c82), to(#000000));
+  margin: 0;
+  padding: 0;
+}
