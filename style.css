@@ -1,10 +1,48 @@
+@-webkit-keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    opacity: 0
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1
+  }
+}
+
+@keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    opacity: 0
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1
+  }
+}
+
+@keyframes topToBottom {
+  0% {
+    bottom: 1000px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
 .content {
   background-image: url(assets/ComputerPhoto.png);
   background-size: cover;
   background-position: center center;
-  /*position: relative;*/
-  height: 90vh;
-  z-index: -10
+  position: absolute;
+  width: 100%;
+  height: 95vh;
+  z-index: -10;
+  -webkit-animation: fade-in-fwd 1s cubic-bezier(.39, .575, .565, 1.000) .5s both;
+  animation: fade-in-fwd 1s cubic-bezier(.39, .575, .565, 1.000) .5s both
 }
 
 .overlay {
@@ -14,7 +52,7 @@
   height: 100%;
   width: 100%;
   z-index: -5;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.0);
 }
 
 .pageHeader {
@@ -38,6 +76,9 @@
   padding: 0;
   color: black;
   text-align: center;
+  position: relative;
+  animation-name: topToBottom;
+  animation-duration: 2.2s;
 }
 
 .jumbotron {
@@ -45,18 +86,24 @@
   height: 80%;
   margin-top: 0%;
   margin-bottom: 0;
+  position: relative;
+  animation-name: topToBottom;
+  animation-duration: 2s;
 }
-.jumbotron.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.col-xs-12.col-xs-offset-0{
+
+.jumbotron.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.col-xs-12.col-xs-offset-0 {
   background: black;
   background: -webkit-gradient(linear, left top, left bottom, from(#191a1a), to(#333536));
   background-image: -ms-linear-gradient(top, #191a1a 0%, #333536 100%);
   color: grey;
 }
 
-
 .buttonContainer {
   display: block;
   text-align: center;
+  position: relative;
+  animation-name: topToBottom;
+  animation-duration: 2s;
 }
 
 .generateButton {
@@ -74,6 +121,9 @@
   font-family: helvetica, serif;
   text-decoration: none;
   transition: all 0.9s ease;
+  position: relative;
+  animation-name: topToBottom;
+  animation-duration: 2s;
 }
 
 .generateButton:hover {
@@ -86,9 +136,11 @@
   text-decoration: none;
 }
 
-.footer {
+
+/*.footer {
   height: 5vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#747c82), to(#000000));
   margin: 0;
   padding: 0;
-}
+  position:  static;
+}*/
