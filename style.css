@@ -1,3 +1,6 @@
+
+/*@-webkit-keyframes text-focus-in{0%{-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes text-focus-in{0%{-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}*/
+
 @-webkit-keyframes fade-in-fwd {
   0% {
     -webkit-transform: translateZ(-80px);
@@ -79,16 +82,26 @@
   position: relative;
   animation-name: topToBottom;
   animation-duration: 2.2s;
+  /*-webkit-animation:text-focus-in 3s cubic-bezier(.55,.085,.68,.53) both;animation:text-focus-in 3s cubic-bezier(.55,.085,.68,.53) both;*/
 }
+
 
 .jumbotron {
   color: black;
   height: 80%;
   margin-top: 0%;
   margin-bottom: 0;
-  position: relative;
+  /*position: relative;
   animation-name: topToBottom;
-  animation-duration: 2s;
+  animation-duration: 2s;*/
+}
+.jumbotronContainer{
+  height: 100%;
+  width: 100%
+}
+.jumbotronText{
+  color: white;
+
 }
 
 .jumbotron.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.col-xs-12.col-xs-offset-0 {
@@ -101,9 +114,9 @@
 .buttonContainer {
   display: block;
   text-align: center;
-  position: relative;
+  /*position: relative;
   animation-name: topToBottom;
-  animation-duration: 2s;
+  animation-duration: 2s;*/
 }
 
 .generateButton {
@@ -121,9 +134,9 @@
   font-family: helvetica, serif;
   text-decoration: none;
   transition: all 0.9s ease;
-  position: relative;
+  /*position: relative;
   animation-name: topToBottom;
-  animation-duration: 2s;
+  animation-duration: 2s;*/
 }
 
 .generateButton:hover {
