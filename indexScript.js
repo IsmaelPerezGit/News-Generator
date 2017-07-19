@@ -1,26 +1,31 @@
 window.onload = function() {
+
+
   $.ajax({
-    url: "https://content.guardianapis.com/search?q=business&api-key=3cacc75f-61ed-4cf7-b623-78c2af06d49d",
+    url: "https://newsapi.org/v1/articles?source=recode&sortBy=top&apiKey=404889df5a3445b1b4b458767f966e23",
     success: function(data) {
-      // console.log(data.articles[0]);
+      console.log(data.articles[0]);
       var articleObjArr = [];
       var storyTitleUrlArray = [];
 
-      function randomTitleUrlGetter() {
-        for (var i = 0; i < data.response.results.length; i++) {
-          var articleObj = {};
-          var retrievedData = data.response.results[i];
-          var retrievedDataTitle = retrievedData.webTitle;
-          var retrievedDataUrl = retrievedData.webUrl;
+        function randomTitleUrlGetter() {
+          for (var i = 0; i < data.articles.length; i++) {
+            var articleObj = {};
+            var retrievedData = data.articles[i];
+            var retrievedDataTitle = retrievedData.title;
+            var retrievedDataUrl = retrievedData.url;
 
-          articleObj.title = retrievedDataTitle;
-          articleObj.url = retrievedDataUrl;
-          articleObjArr.push(articleObj);
-          storyTitleUrlArray.push(articleObjArr[i]);
+            articleObj.title = retrievedDataTitle;
+            articleObj.url = retrievedDataUrl;
+            articleObjArr.push(articleObj);
+            storyTitleUrlArray.push(articleObjArr[i]);
+          }
+          var randomTitle = storyTitleUrlArray[Math.floor(Math.random() * storyTitleUrlArray.length)];
+          return randomTitle;
         }
-        var randomTitle = storyTitleUrlArray[Math.floor(Math.random() * storyTitleUrlArray.length)];
-        return randomTitle;
-      }
+
+
+
         randomTitleUrlGetter();
 
         document.getElementsByClassName("generateButton")[0].addEventListener("click", function() {
@@ -35,4 +40,5 @@ window.onload = function() {
       });
     }
   });
+
 };
