@@ -1,9 +1,8 @@
 window.onload = function() {
   $.ajax({
-    url: "https://content.guardianapis.com/search?q=technology&api-key=3cacc75f-61ed-4cf7-b623-78c2af06d49d",
+    url: "https://content.guardianapis.com/search?q=business&api-key=3cacc75f-61ed-4cf7-b623-78c2af06d49d",
     success: function(data) {
-
-
+      // console.log(data.articles[0]);
       var articleObjArr = [];
       var storyTitleUrlArray = [];
 
@@ -16,24 +15,23 @@ window.onload = function() {
 
           articleObj.title = retrievedDataTitle;
           articleObj.url = retrievedDataUrl;
-          //console.log(articleObj);
           articleObjArr.push(articleObj);
-          //console.log(articleObjArr);
           storyTitleUrlArray.push(articleObjArr[i]);
-
         }
         var randomTitle = storyTitleUrlArray[Math.floor(Math.random() * storyTitleUrlArray.length)];
-        console.log(randomTitle.title);
-        console.log(randomTitle.url);
         return randomTitle;
       }
         randomTitleUrlGetter();
 
         document.getElementsByClassName("generateButton")[0].addEventListener("click", function() {
         var randomizedObject = randomTitleUrlGetter();
-        document.getElementsByClassName("jumbotronText")[0].innerHTML = randomizedObject.title;
-        document.getElementsByClassName("generateButton")[0].innerHTML = "Next Story";
-        document.getElementsByClassName("linkText")[0].href = randomizedObject.url;
+          document.getElementsByClassName("jumbotronText")[0].innerHTML = randomizedObject.title;
+          document.getElementsByClassName("generateButton")[0].innerHTML = "Next Story";
+          document.getElementsByClassName("linkText")[0].href = randomizedObject.url;
+      });
+
+      document.getElementsByClassName("generateButton")[0].addEventListener("click", function() {
+        this.blur();
       });
     }
   });

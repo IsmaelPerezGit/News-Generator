@@ -1,0 +1,215 @@
+
+@-webkit-keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    opacity: 0
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1
+  }
+}
+
+@keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    opacity: 0
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1
+  }
+}
+
+@keyframes topToBottom {
+  0% {
+    bottom: 1000px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+.content {
+  margin: 0;
+  padding: 0;
+  background-image: url(assets/DarkGadgets.jpeg);
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  width: 100%;
+  height: 95.5%;
+  z-index: -10;
+  -webkit-animation: fade-in-fwd 1s cubic-bezier(.39, .575, .565, 1.000) 1.0s both;
+  animation: fade-in-fwd 1s cubic-bezier(.39, .575, .565, 1.000) 1.0s both
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -5;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  height: 5%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#747c82), to(#000000));
+  margin: 0;
+  padding: 0;
+  position:  static;
+}
+
+.listCont{
+display: inline-block;
+height: 100%;
+text-align: center;
+margin-top: .5%;
+margin-bottom: .5%;
+padding: 0;
+}
+.headerList {
+  color: white;
+}
+.headerList:hover{
+  text-shadow: black 0 1px 0;
+  color: grey;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.titleCont {
+  height: 5%;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-family: times-new-roman;
+  text-shadow: #818585 0 1px 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  position: relative;
+  animation-name: topToBottom;
+  animation-duration: 2.2s;
+  /*-webkit-animation:text-focus-in 3s cubic-bezier(.55,.085,.68,.53) both;animation:text-focus-in 3s cubic-bezier(.55,.085,.68,.53) both;*/
+}
+
+.jumbotron {
+  color: rgba(0, 0, 0, 0.5);
+  height: 80%;
+  margin-top: 0%;
+  margin-bottom: 0;
+  /*position: relative;
+  animation-name: topToBottom;
+  animation-duration: 2s;*/
+}
+
+.jumbotronContainer {
+  color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%
+}
+
+.linkText {
+  color: white;
+}
+
+.linkText:hover {
+  color: grey;
+  text-decoration: none;
+}
+
+.linkText:focus {
+  color: white;
+  text-decoration: none;
+}
+
+.jumbotronText {
+  color: white;
+  font-family: Impact;
+  -webkit-animation: fade-in-fwd 3s cubic-bezier(.39, .575, .565, 1.000) 3.5s both;
+  animation: fade-in-fwd 3s cubic-bezier(.39, .575, .565, 1.000) 3.5s both;
+}
+
+.jumbotron.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.col-xs-12.col-xs-offset-0 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#191a1a), to(#333536));
+  background-image: -ms-linear-gradient(top, #191a1a 0%, #333536 100%);
+  color: rgba(0, 0, 0, 1);
+}
+
+.buttonContainer {
+  display: block;
+  text-align: center;
+  /*position: relative;
+  animation-name: topToBottom;
+  animation-duration: 2s;*/
+}
+
+.generateButton {
+  display: block;
+  text-align: center;
+  border: 1px solid #253138;
+  background: #363a3d;
+  background: -webkit-gradient(linear, left top, left bottom, from(#747c82), to(#363a3d));
+  border-radius: 30px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(255, 255, 255, 0.4) 0 1px 0;
+  box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(255, 255, 255, 0.4) 0 1px 0;
+  text-shadow: #818585 0 1px 0;
+  color: white;
+  font-size: 21px;
+  font-family: helvetica, serif;
+  text-decoration: none;
+  transition: all 0.9s ease;
+  /*position: relative;
+  animation-name: topToBottom;
+  animation-duration: 2s;*/
+}
+
+.generateButton:hover {
+  border: 1px solid black;
+  text-shadow: black 0 1px 0;
+  background: black;
+  background: -webkit-gradient(linear, left top, left bottom, from(#191a1a), to(#333536));
+  background-image: -ms-linear-gradient(top, #191a1a 0%, #333536 100%);
+  color: grey;
+  text-decoration: none;
+}
+
+.generateButton:focus {
+  display: block;
+  text-align: center;
+  border: 1px solid #253138;
+  background: #363a3d;
+  background: -webkit-gradient(linear, left top, left bottom, from(#747c82), to(#363a3d));
+  border-radius: 30px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(255, 255, 255, 0.4) 0 1px 0;
+  box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(255, 255, 255, 0.4) 0 1px 0;
+  text-shadow: #818585 0 1px 0;
+  color: #000000;
+  font-size: 21px;
+  font-family: helvetica, serif;
+  text-decoration: none;
+
+  /*transition: all 0.9s ease;*/
+}
+
+
+/*.footer {
+  height: 5vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#747c82), to(#000000));
+  margin: 0;
+  padding: 0;
+  position:  static;
+}*/
