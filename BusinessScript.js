@@ -29,7 +29,7 @@ window.onload = function() {
         var randomizedObject = randomTitleUrlGetter();
           document.getElementsByClassName("jumbotronText")[0].innerHTML = randomizedObject.title;
           document.getElementsByClassName("generateButton")[0].innerHTML = "Next Story";
-          document.getElementsByClassName("linkText")[0].href = randomizedObject.url;
+          document.getElementsByClassName("jumbotronText")[0].href = randomizedObject.url;
       });
 
       document.getElementsByClassName("generateButton")[0].addEventListener("click", function() {

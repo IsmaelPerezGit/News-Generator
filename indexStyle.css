@@ -1,4 +1,3 @@
-
 @-webkit-keyframes fade-in-fwd {
   0% {
     -webkit-transform: translateZ(-80px);
@@ -55,7 +54,7 @@
   height: 100%;
   width: 100%;
   z-index: -5;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .header {
@@ -63,21 +62,23 @@
   background: -webkit-gradient(linear, left top, left bottom, from(#747c82), to(#000000));
   margin: 0;
   padding: 0;
-  position:  static;
+  position: static;
 }
 
-.listCont{
-display: inline-block;
-height: 100%;
-text-align: center;
-margin-top: .5%;
-margin-bottom: .5%;
-padding: 0;
+.listCont {
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+  margin-top: .5%;
+  margin-bottom: .5%;
+  padding: 0;
 }
+
 .headerList {
   color: white;
 }
-.headerList:hover{
+
+.headerList:hover {
   text-shadow: black 0 1px 0;
   color: grey;
   text-decoration: none;
@@ -111,50 +112,55 @@ padding: 0;
   height: 80%;
   margin-top: 0%;
   margin-bottom: 0;
+  padding: 0;
   /*position: relative;
   animation-name: topToBottom;
   animation-duration: 2s;*/
 }
 
 .jumbotronContainer {
-  color: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  width: 100%
-}
-
-.linkText {
-  color: white;
-}
-
-.linkText:hover {
-  color: grey;
-  text-decoration: none;
-}
-
-.linkText:focus {
-  color: white;
-  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 3%;
+  /*background-image: url();*/
+  height: 75%;
+  width: 100%;
+  padding-top: 5%;
 }
 
 .jumbotronText {
   color: white;
   font-family: Impact;
+  font-size: 250%;
+  /*margin-top: 10%;*/
+  display: block;
+  text-align: center;
   -webkit-animation: fade-in-fwd 3s cubic-bezier(.39, .575, .565, 1.000) 3.5s both;
   animation: fade-in-fwd 3s cubic-bezier(.39, .575, .565, 1.000) 3.5s both;
+  padding: 0;
+}
+
+.jumbotronText:hover {
+  color: grey;
+  text-decoration: none;
+}
+
+.jumbotronText:focus {
+  color: white;
+  text-decoration: none;
 }
 
 .jumbotron.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.col-xs-12.col-xs-offset-0 {
   background: -webkit-gradient(linear, left top, left bottom, from(#191a1a), to(#333536));
-  background-image: -ms-linear-gradient(top, #191a1a 0%, #333536 100%);
-  color: rgba(0, 0, 0, 1);
 }
 
 .buttonContainer {
-  display: block;
+  /*display: block;*/
   text-align: center;
-  /*position: relative;
+  margin: 0;
+  margin-top: 3%;
+  position: relative;
   animation-name: topToBottom;
-  animation-duration: 2s;*/
+  animation-duration: 2s;
 }
 
 .generateButton {
@@ -168,7 +174,7 @@ padding: 0;
   box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(255, 255, 255, 0.4) 0 1px 0;
   text-shadow: #818585 0 1px 0;
   color: white;
-  font-size: 21px;
+  font-size: 125%;
   font-family: helvetica, serif;
   text-decoration: none;
   transition: all 0.9s ease;
@@ -201,7 +207,6 @@ padding: 0;
   font-size: 21px;
   font-family: helvetica, serif;
   text-decoration: none;
-
   /*transition: all 0.9s ease;*/
 }
 
