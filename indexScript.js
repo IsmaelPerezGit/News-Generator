@@ -1,3 +1,4 @@
+
 window.onload = function() {
 
   $.ajax({
@@ -25,19 +26,27 @@ window.onload = function() {
         return randomArticle;
       }
 
-      randomTitleUrlGetter();
+      var jumbotronText = document.getElementsByClassName("jumbotronText")[0];
+      var button = document.getElementsByClassName("generateButton")[0]
 
-      document.getElementsByClassName("generateButton")[0].addEventListener("click", function() {
-        var randomizedObject = randomTitleUrlGetter();
-        document.getElementsByClassName("jumbotronText")[0].innerHTML = randomizedObject.title;
-        document.getElementsByClassName("generateButton")[0].innerHTML = "Next Story";
-        document.getElementsByClassName("jumbotronText")[0].href = randomizedObject.url;
+      randomTitleUrlGetter();
+      var resetButtonCss = function(){
+        button.addEventListener("click", function() {
+        this.blur();
+     });
+   };
+
+      button.addEventListener("click", function() {
+      var randomizedObject = randomTitleUrlGetter();
+      var  counter = 0;
+      jumbotronText.innerHTML = randomizedObject.title;
+      button.innerHTML = "Next Story";
+      jumbotronText.href = randomizedObject.url;
+
       });
 
-      document.getElementsByClassName("generateButton")[0].addEventListener("click", function() {
-        this.blur();
+      resetButtonCss();
 
-     });
     }
   });
 };

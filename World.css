@@ -118,8 +118,8 @@
   animation-duration: 2s;*/
 }
 
-.jumbotronContainer {
-  background-color: rgba(0, 0, 0, 0.6);
+.jumbotronSect {
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 3%;
   /*background-image: url();*/
   height: 75%;
@@ -127,16 +127,21 @@
   padding-top: 5%;
 }
 
+.jumbotronTextCont {
+  margin-top: 10%;
+  color: rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
 .jumbotronText {
-  color: #FEFEFE;
+  color: white;
   font-family: Impact;
-  font-size: 250%;
+  font-size: 100%;
   /*margin-top: 10%;*/
-  display: block;
+  /*display: block;*/
   text-align: center;
   -webkit-animation: fade-in-fwd 3s cubic-bezier(.39, .575, .565, 1.000) 3.5s both;
   animation: fade-in-fwd 3s cubic-bezier(.39, .575, .565, 1.000) 3.5s both;
-  padding: 0;
 }
 
 .jumbotronText:hover {
