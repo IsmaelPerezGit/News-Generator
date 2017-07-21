@@ -49,13 +49,24 @@ window.onload = function() {
         jumbotronText.href = randomizedObject.url;
       });
 
-      articleButton.addEventListener("click", function(){
-        this.blur();
-      });
-      randomArticleButton.addEventListener("click", function(){
-        this.blur();
+      randomArticleButton.addEventListener("click", function() {
+        var myVar;
+        myVar = setInterval(function() {
+          var randomizedObject = randomTitleUrlGetter();
+          var counter = 0;
+          jumbotronText.innerHTML = randomizedObject.title;
+          articleButton.innerHTML = "Next Story";
+          jumbotronText.href = randomizedObject.url;
+        }, 4000);
       });
 
+      articleButton.addEventListener("click", function() {
+        this.blur();
+      });
+      randomArticleButton.addEventListener("click", function() {
+        this.blur();
+
+      });
     }
   });
 };

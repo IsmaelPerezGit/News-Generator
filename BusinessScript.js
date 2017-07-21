@@ -45,6 +45,17 @@ window.onload = function() {
 
       });
 
+      randomArticleButton.addEventListener("click", function() {
+        var myVar;
+        myVar = setInterval(function() {
+          var randomizedObject = randomTitleUrlGetter();
+          var counter = 0;
+          jumbotronText.innerHTML = randomizedObject.title;
+          articleButton.innerHTML = "Next Story";
+          jumbotronText.href = randomizedObject.url;
+        }, 4000);
+      });
+
       button.addEventListener("click", function(){
         this.blur();
       });
