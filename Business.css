@@ -73,26 +73,25 @@
   margin-bottom: .5%;
   padding: 0;
 }
-.innerListCont{
+
+.innerListCont {
   margin: 0;
   margin-top: .5%;
-  margin-bottom:.5%;
+  margin-bottom: .5%;
 }
 
 .headerList {
   text-align: center;
   color: white;
-
 }
 
 .headerList:hover {
   text-shadow: black 0 1px 0;
   color: grey;
   text-decoration: none;
-  margin: 0;
-  padding: 0;
 }
-.home{
+
+.home {
   color: white;
   height: 100%;
   text-align: center;
@@ -101,12 +100,10 @@
   padding: 0;
 }
 
-.headerList:hover {
+.home:hover {
   text-shadow: black 0 1px 0;
   color: grey;
   text-decoration: none;
-  margin: 0;
-  padding: 0;
 }
 
 .titleCont {
@@ -221,6 +218,7 @@
   animation-name: topToBottom;
   animation-duration: 2s;*/
 }
+
 .getArticleButton:hover {
   border: 1px solid black;
   text-shadow: black 0 1px 0;
