@@ -53,7 +53,7 @@ window.onload = function() {
           jumbotronText.innerHTML = randomizedObject.title;
           articleButton.innerHTML = "Next Story";
           jumbotronText.href = randomizedObject.url;
-        }, 4000);
+        }, 8000);
       });
 
       button.addEventListener("click", function(){
